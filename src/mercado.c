@@ -1,27 +1,7 @@
-#include "mercado.h"
 #include <stdio.h>
+#include <mercado.h>
 
-#define SIZE_PRODUCTS 3
-
-Product products[SIZE_PRODUCTS] = {
-  {"sabão", 1, 1.3}, 
-  {"banana", 5, 3.3}, 
-  {"vassoura", 0, 10} 
-};
-
-int main() {
-  
-  int exit = 0;
-  while (exit == 0) {
-
-    exit = get_user_action();
-  }
-
-  return 0;
-}
-
-
-int get_user_action() {
+int get_user_action(Product products[]) {
   int input;
   
   print_instructions();
@@ -30,13 +10,13 @@ int get_user_action() {
   
   switch (input) {
   case 1:
-    insert_item();
+    insert_item(products);
     break;
   case 2:
-    show_cart();
+    show_cart(products);
     break;
   case 3:
-    clean_cart();
+    clean_cart(products);
     break;
   case 4:
     return 1;
@@ -49,16 +29,16 @@ void print_instructions(){
   
 }
 
-void insert_item(){
+void insert_item(Product products[]){
 
 }
 
-void show_cart(){
+void show_cart(Product products[]){
 
 }
 
-void clean_cart(){
-  for(int i = 0; i < SIZE_PRODUCTS; i++){
+void clean_cart(Product products[]){
+  for(int i = 0; i < 3; i++){
     products[0].qtd = 0;
   }
 }
