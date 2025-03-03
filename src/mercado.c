@@ -34,7 +34,22 @@ void insert_item(Product products[]){
 }
 
 void show_cart(Product products[]){
+  int i = 0;
+  float total = 0.0;
 
+  printf("\nCarrinho de Compras:\n");
+  printf("---------------------------------------\n");
+
+  while (products[i].qtd != -1) {
+      printf("Qtd: %-5d", products[i].qtd);
+      printf("Product: %-20s\t", products[i].name);
+      printf("Value: %.2f\n", products[i].value);
+      
+      total = total + products[i].value;
+      i = i + 1;
+  }
+  printf("---------------------------------------\n");
+  printf("Total: %.2f\n\n", total);
 }
 
 void clean_cart(Product products[]){
