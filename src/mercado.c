@@ -38,17 +38,19 @@ void show_cart(Product products[]){
   float total = 0.0;
 
   printf("\nCarrinho de Compras:\n");
-  printf("---------------------------------------\n");
+  printf("------------------------------------------------------\n");
+  printf("%-5s \t%-20s \t%-10s \t%-10s\n", "Qtd", "Product", "Value (un.)", "Total");
 
   while (products[i].qtd != -1) {
-      printf("Qtd: %-5d", products[i].qtd);
-      printf("Product: %-20s\t", products[i].name);
-      printf("Value: %.2f\n", products[i].value);
+      printf("%-5d\t", products[i].qtd);
+      printf("%-20s\t", products[i].name);
+      printf("%-10.2f\t", products[i].value);
+      printf("%-10.2f\t\n", products[i].value * products[i].qtd);
       
-      total = total + products[i].value;
+      total = total + products[i].value * products[i].qtd;
       i = i + 1;
   }
-  printf("---------------------------------------\n");
+  printf("------------------------------------------------------\n");
   printf("Total: %.2f\n\n", total);
 }
 
