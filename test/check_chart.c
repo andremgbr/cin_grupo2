@@ -8,7 +8,7 @@ START_TEST(teste_insert_item) {
 
   int pipe_fds[2];
   pipe(pipe_fds);
-  write(pipe_fds[1], "2\n3\n", 5);
+  write(pipe_fds[1], "2\n3\n0\n", 7);
 
   dup2(pipe_fds[0], STDIN_FILENO);
   close(pipe_fds[0]);
