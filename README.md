@@ -92,3 +92,5 @@ Siga as instruções exibidas no console para interagir com o programa.
 ## Atualizações
 
 Esse readme é apenas um esboço inicial para o projeto e será ajustado conforme o andamento do desenvollvimento da versão final do projeto.
+
+.
