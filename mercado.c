@@ -1,24 +1,42 @@
+#include "mercado.h"
 #include <stdio.h>
-#include <mercado.h>
 
-int get_user_action(Product products[])
-{
+#define SIZE_PRODUCTS 3
+
+Product products[SIZE_PRODUCTS] = {
+  {"sabão", 1, 1.3}, 
+  {"banana", 5, 3.3}, 
+  {"vassoura", 0, 10} 
+};
+
+int main() {
+  
+  int exit = 0;
+  while (exit == 0) {
+
+    exit = get_user_action();
+  }
+
+  return 0;
+}
+
+
+int get_user_action() {
   int input;
-
+  
   print_instructions();
-
+  
   scanf("%d", &input);
-
-  switch (input)
-  {
+  
+  switch (input) {
   case 1:
-    insert_item(products);
+    insert_item();
     break;
   case 2:
-    show_cart(products);
+    show_cart();
     break;
   case 3:
-    clean_cart(products);
+    clean_cart();
     break;
   case 4:
     return 1;
@@ -27,19 +45,13 @@ int get_user_action(Product products[])
   return 0;
 }
 
-void print_instructions()
-{
-  printf("\n1- Inserir item;\n");
-  printf("\n2-Mostrar Carrinho;\n");
-  printf("\n3-Limpar Carrinho;\n");
-  printf("\n4-Sair;\n");
+void print_instructions(){
+  
 }
 
-void insert_item(Product products[])
+void insert_item()
 {
   int addOther=1;
-  int SIZE_PRODUCTS=4;
-
   while(addOther==1)
   {
     int local_itemID=-1;
@@ -88,7 +100,7 @@ void insert_item(Product products[])
     if(validAmount==1 && validID==1)
     {
       //Inserir Rotina para escrever na memória global 
-      products[local_itemID-1].qtd= products[local_itemID-1].qtd+local_itemAmount;
+
       printf("%d x %s adicionadas ao carrinho\n",local_itemAmount ,products[local_itemID-1].name);
 
     }
@@ -110,33 +122,12 @@ void insert_item(Product products[])
   }
 }
 
-void show_cart(Product products[])
-{
-  int i = 0;
-  float total = 0.0;
+void show_cart(){
 
-  printf("\nCarrinho de Compras:\n");
-  printf("------------------------------------------------------\n");
-  printf("%-5s \t%-20s \t%-10s \t%-10s\n", "Qtd", "Product", "Value (un.)", "Total");
-
-  while (products[i].qtd != -1)
-  {
-    printf("%-5d\t", products[i].qtd);
-    printf("%-20s\t", products[i].name);
-    printf("%-10.2f\t", products[i].value);
-    printf("%-10.2f\t\n", products[i].value * products[i].qtd);
-
-    total = total + products[i].value * products[i].qtd;
-    i = i + 1;
-  }
-  printf("------------------------------------------------------\n");
-  printf("Total: %.2f\n\n", total);
 }
 
-void clean_cart(Product products[])
-{
-  for (int i = 0; i < 3; i++)
-  {
+void clean_cart(){
+  for(int i = 0; i < SIZE_PRODUCTS; i++){
     products[0].qtd = 0;
   }
 }
