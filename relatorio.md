@@ -1,3 +1,11 @@
+### Depedencias
+
+$ sudo apt-get install check
+
+make -> para buildar a aplicação
+make run -> para executar a aplicação
+make test -> para executar os teste unitários
+
 ### GitFlow 
 
 O repositório será divido em 2 branches principais. 
