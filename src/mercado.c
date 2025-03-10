@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <mercado.h>
 
-int get_user_action(Product products[]) {
+int get_user_action(Product products[])
+{
   int input;
-  
+
   print_instructions();
-  
+
   scanf("%d", &input);
-  
-  switch (input) {
+
+  switch (input)
+  {
   case 1:
     insert_item(products);
     break;
@@ -25,8 +27,12 @@ int get_user_action(Product products[]) {
   return 0;
 }
 
-void print_instructions(){
-  
+void print_instructions()
+{
+  printf("\n1- Inserir item;\n");
+  printf("\n2-Mostrar Carrinho;\n");
+  printf("\n3-Limpar Carrinho;\n");
+  printf("\n4-Sair;\n");
 }
 
 void insert_item(Product products[])
@@ -104,7 +110,8 @@ void insert_item(Product products[])
   }
 }
 
-void show_cart(Product products[]){
+void show_cart(Product products[])
+{
   int i = 0;
   float total = 0.0;
 
@@ -112,21 +119,24 @@ void show_cart(Product products[]){
   printf("------------------------------------------------------\n");
   printf("%-5s \t%-20s \t%-10s \t%-10s\n", "Qtd", "Product", "Value (un.)", "Total");
 
-  while (products[i].qtd != -1) {
-      printf("%-5d\t", products[i].qtd);
-      printf("%-20s\t", products[i].name);
-      printf("%-10.2f\t", products[i].value);
-      printf("%-10.2f\t\n", products[i].value * products[i].qtd);
-      
-      total = total + products[i].value * products[i].qtd;
-      i = i + 1;
+  while (products[i].qtd != -1)
+  {
+    printf("%-5d\t", products[i].qtd);
+    printf("%-20s\t", products[i].name);
+    printf("%-10.2f\t", products[i].value);
+    printf("%-10.2f\t\n", products[i].value * products[i].qtd);
+
+    total = total + products[i].value * products[i].qtd;
+    i = i + 1;
   }
   printf("------------------------------------------------------\n");
   printf("Total: %.2f\n\n", total);
 }
 
-void clean_cart(Product products[]){
-  for(int i = 0; i < 3; i++){
+void clean_cart(Product products[])
+{
+  for (int i = 0; i < 3; i++)
+  {
     products[0].qtd = 0;
   }
 }
