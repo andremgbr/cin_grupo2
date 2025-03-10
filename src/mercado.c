@@ -137,6 +137,6 @@ void clean_cart(Product products[])
 {
   for (int i = 0; i < 3; i++)
   {
-    products[0].qtd = 0;
+    products[i].qtd = 0;
   }
 }
