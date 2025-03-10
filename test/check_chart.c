@@ -21,12 +21,13 @@ END_TEST
 
 START_TEST(teste_clean_chart) {
 
-  Product cart[2] = {{"banana", 2, 1.1}, {"vassoura", 3, 1}};
+  Product cart[3] = {{"banana", 2, 1.1}, {"vassoura", 3, 1}, {"sabao", 3,1}};
 
   clean_cart(cart);
 
   ck_assert_int_eq(cart[0].qtd, 0);
   ck_assert_int_eq(cart[1].qtd, 0);
+  ck_assert_int_eq(cart[2].qtd, 0);
 }
 
 Suite *suite_case1(void) {
