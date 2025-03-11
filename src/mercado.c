@@ -37,15 +37,18 @@ void print_instructions()
 
 void insert_item(Product products[])
 {
+
   int addOther=1;
 
-  while(addOther==1)
+
+  while (addOther == 1)
   {
-    int local_itemID=-1;
-    int local_itemAmount=-1;
+    int local_itemID = -1;
+    int local_itemAmount = -1;
 
     printf("Lista de Produtos\n");
     printf("Código - Nome\n");
+
     int i = 0;
     while(products[i].qtd != -1)
     {
@@ -58,56 +61,56 @@ void insert_item(Product products[])
     //recebimento e validação do ID
     int validID=0;
     while(validID==0)
+
     {
       printf("Digite o código do produto que deseja:\n");
-      scanf("%d",&local_itemID);
-      if(local_itemID<=SIZE_PRODUCTS && local_itemID>0)
+      scanf("%d", &local_itemID);
+      if (local_itemID <= SIZE_PRODUCTS && local_itemID > 0)
       {
-        validID=1;
+        validID = 1;
       }
       else
-      { 
+      {
         printf("Código do produto inválido\n");
       }
     }
-    
-    //recebimento e validação da quantidade
-    int validAmount=0;
-    while(validAmount==0)
+
+    // recebimento e validação da quantidade
+    int validAmount = 0;
+    while (validAmount == 0)
     {
       printf("Digite a quantidade do produto que deseja:\n");
-      scanf("%d",&local_itemAmount);
-      if(local_itemAmount>=0)
+      scanf("%d", &local_itemAmount);
+      if (local_itemAmount >= 0)
       {
-        validAmount=1;
+        validAmount = 1;
       }
       else
-      { 
+      {
         printf("Quantidade do produto inválida\n");
       }
     }
 
-    //se ID e Quantidade forem validos escrevemos na memoria global
-    if(validAmount==1 && validID==1)
+    // se ID e Quantidade forem validos escrevemos na memoria global
+    if (validAmount == 1 && validID == 1)
     {
-      //Inserir Rotina para escrever na memória global 
-      products[local_itemID-1].qtd= products[local_itemID-1].qtd+local_itemAmount;
-      printf("%d x %s adicionadas ao carrinho\n",local_itemAmount ,products[local_itemID-1].name);
-
+      // Inserir Rotina para escrever na memória global
+      products[local_itemID - 1].qtd = products[local_itemID - 1].qtd + local_itemAmount;
+      printf("%d x %s adicionadas ao carrinho\n", local_itemAmount, products[local_itemID - 1].name);
     }
 
-    int validSelection=0;
-    while(validSelection==0)
+    int validSelection = 0;
+    while (validSelection == 0)
     {
       printf("Deseja adicionar outro item ao carrinho? (0-Nao 1-Sim)\n");
-      scanf("%d",&addOther);
-      if(addOther==0 || addOther==1)
+      scanf("%d", &addOther);
+      if (addOther == 0 || addOther == 1)
       {
-        validSelection=1;
+        validSelection = 1;
       }
-      else 
+      else
       {
-        validSelection=0;
+        validSelection = 0;
       }
     }
   }
@@ -138,8 +141,11 @@ void show_cart(Product products[])
 
 void clean_cart(Product products[])
 {
-  for (int i = 0; i < 3; i++)
+  int i = 0;
+
+  while (products[i].qtd != -1)
   {
     products[i].qtd = 0;
+    i = i + 1;
   }
 }
