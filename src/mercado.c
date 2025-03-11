@@ -37,8 +37,9 @@ void print_instructions()
 
 void insert_item(Product products[])
 {
-  int addOther = 1;
-  int SIZE_PRODUCTS = 4;
+
+  int addOther=1;
+
 
   while (addOther == 1)
   {
@@ -47,14 +48,20 @@ void insert_item(Product products[])
 
     printf("Lista de Produtos\n");
     printf("Código - Nome\n");
-    for (int i = 0; i < SIZE_PRODUCTS; i++)
+
+    int i = 0;
+    while(products[i].qtd != -1)
     {
-      printf("%d - %s \n", i + 1, products[i].name);
+      printf("%d - %s \n",i+1,products[i].name);
+      i++;
     }
 
-    // recebimento e validação do ID
-    int validID = 0;
-    while (validID == 0)
+    int SIZE_PRODUCTS = i;
+
+    //recebimento e validação do ID
+    int validID=0;
+    while(validID==0)
+
     {
       printf("Digite o código do produto que deseja:\n");
       scanf("%d", &local_itemID);
