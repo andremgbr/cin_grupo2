@@ -4,7 +4,14 @@
 #include <unistd.h>
 
 START_TEST(teste_insert_item) {
-  Product cart[2] = {{"banana", 2, 1.1}, {"vassoura", 3, 1}};
+  Product cart[6] = {
+    {"banana", 2, 1.1},
+    {"vassoura", 3, 1},
+    {"sabao", 3,1},
+    {"roupa",0,3},
+    {"calça",0,4},
+    {"",-1,-1}
+  };
 
   int pipe_fds[2];
   pipe(pipe_fds);
@@ -21,7 +28,14 @@ END_TEST
 
 START_TEST(teste_clean_chart) {
 
-  Product cart[3] = {{"banana", 2, 1.1}, {"vassoura", 3, 1}, {"sabao", 3,1}};
+  Product cart[6] = {
+    {"banana", 2, 1.1},
+    {"vassoura", 3, 1},
+    {"sabao", 3,1},
+    {"roupa",0,3},
+    {"calça",0,4},
+    {"",-1,-1}
+  };
 
   clean_cart(cart);
 
