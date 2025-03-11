@@ -162,12 +162,14 @@ int read_csv(Product products[],const char *file_path)
         int qtd;
         float value;
 
-        if (sscanf(line, "%19[^,],%d,%f", name, &qtd, &value) == 3) {
-            if (strcmp(name, "-1") == 0) break;
+        if (sscanf(line, "%19[^,],%d,%f", name, &qtd, &value) == 3) 
+        {
+
 
             strcpy(products[count].name, name);
             products[count].qtd = qtd;
             products[count].value = value;
+            if (strcmp(name, "-1") == 0) break;
             count++;
         }
     }
