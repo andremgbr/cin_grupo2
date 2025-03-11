@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <mercado.h>
+#include <string.h>
 
 int get_user_action(Product products[])
 {
@@ -148,4 +149,40 @@ void clean_cart(Product products[])
     products[i].qtd = 0;
     i = i + 1;
   }
+}
+
+#define MAX_PRODUCTS 100
+#define MAX_LINE 100
+
+int read_csv(Product products[],const char *file_path) 
+{
+    FILE *file = fopen(file_path, "r");
+    if (!file) {
+        perror("Erro ao abrir arquivo");
+        return 0;
+    }
+
+    char line[MAX_LINE];
+    fgets(line, MAX_LINE, file); 
+
+    int count = 0;
+    while (fgets(line, MAX_LINE, file) && count < MAX_PRODUCTS) {
+        char name[20];
+        int qtd;
+        float value;
+
+        if (sscanf(line, "%19[^,],%d,%f", name, &qtd, &value) == 3) 
+        {
+
+
+            strcpy(products[count].name, name);
+            products[count].qtd = qtd;
+            products[count].value = value;
+            if (strcmp(name, "-1") == 0) break;
+            count++;
+        }
+    }
+
+    fclose(file);
+    return count; // Retorna número de produtos lidos
 }
