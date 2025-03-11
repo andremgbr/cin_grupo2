@@ -1,15 +1,14 @@
 #include "../inc/mercado.h"
 
-#define SIZE_PRODUCTS 4
+#define SIZE_PRODUCTS 100
 
 int main() {
-  
-Product products[SIZE_PRODUCTS] = {
-  {"sabão", 1, 1.3}, 
-  {"banana", 5, 3.3}, 
-  {"vassoura", 0, 10},
-  {"", -1, -1} // Produto sentinela (Indica fim da lista)
-};
+
+  Product products[SIZE_PRODUCTS];
+
+  const char *file_path = "./files/estoque.csv";
+  read_csv(products,file_path);
+
 
   int exit = 0;
   while (exit == 0) {
