@@ -184,5 +184,8 @@ int read_csv(Product products[],const char *file_path)
     }
 
     fclose(file);
+
+    clean_cart(products);
+
     return count; // Retorna número de produtos lidos
 }
