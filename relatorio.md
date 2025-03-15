@@ -23,13 +23,9 @@ https://www.alura.com.br/artigos/git-flow-o-que-e-como-quando-utilizar?srsltid=A
 
 Adotar alguma convenção de commit (ex.: feat: ..., fix: ..., docs: ...) e versionar com tags (v1.0.0, v1.1.0, etc.) na medida que o projeto for evoluindo.
 
-
-#### Sujestões Professor
-
-show cart
-remover itens do carrinho
-efetivar venda (Limpa o carrinho e mexe nas quantidades)
-desistir da compra - libera o carrinho mas nao meche nas quantidades
-fechamento do caixa - registrando as venda e listar as veendas do  dia 
-incrementar outras funcionalidades
-gerar relatorio e arquivo txt de fechamento do caixa
+###
+#### André Roetger
+* Achei muito interessante o gerenciamento de tarefas disponível no Projects do GitHub. Além disso, o próprio gerenciamento de issues oferece diversas funcionalidades úteis para o desenvolvimento do projeto.
+* Eu desconhecia a ferramenta Actions do GitHub e achei extremamente interessante aprender a utilizá-la. Fiquei impressionado com o quão poderosa ela é, especialmente para o controle de testes, automação de processos e envio de notificações por e-mail para os responsáveis.
+* Um dos desafios enfrentados pelo time foi a falta de um líder responsável por definir o escopo do projeto e designar as tarefas entre os membros.
+* Tivemos que realizar algumas reuniões para alinhar decisões importantes. Apesar de a seção de issues permitir comentários, sentimos falta de um ambiente de chat instantâneo para facilitar a comunicação em tempo real.
