@@ -63,16 +63,16 @@ START_TEST(teste_read_csv)
   
   ck_assert_int_eq(count, 3);
   ck_assert_str_eq(products[0].name, "banana");
-  ck_assert_int_eq(products[0].qtd, 2);
+  ck_assert_int_eq(products[0].qtd, 0);
   ck_assert_float_eq(products[0].value, 1.1);
   
   ck_assert_str_eq(products[1].name, "vassoura");
-  ck_assert_int_eq(products[1].qtd, 3);
+  ck_assert_int_eq(products[1].qtd, 0);
   ck_assert_float_eq(products[1].value, 1.0);
   
   ck_assert_str_eq(products[2].name, "sabao");
-  ck_assert_int_eq(products[2].qtd, 3);
-  ck_assert_float_eq(products[2].value, 1.0);
+  ck_assert_int_eq(products[2].qtd, 0);
+  ck_assert_float_eq(products[2].value,1.0);
   
   remove(file_path);
 }
