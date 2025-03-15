@@ -1,10 +1,9 @@
 ### Depedencias
 
+FrameWork de test em C
+```Bash
 $ sudo apt-get install check
-
-```make``` para buildar a aplicação\
-```make run``` para executar a aplicação\
-```make test``` para executar os teste unitários\
+```
 
 ### GitFlow - Estratégia de branching
 
@@ -15,21 +14,20 @@ O repositório será divido em 2 branches principais.
 
 Para alguma nova criação de funcionalidade deverá ser criada uma nova branch a partir do Dev com prefixo feature/ no nome, Ex: feature/funcionalidade, o que faŕa o merge para a branch Dev..\
 Para alguma correção de bug presente em produção, deve-se criar uma nova branch a partir do Main com prefixo hotfix/ no nome, Ex: hotfix/funcionalidade, o que deve ser feito merge na main e na dev posteriormente.\
-Para release, é criado uma nova branch a partir do dev com prefixo release com o número da versão, Ex release/1.0.0, e desse branch faz apenas as correções das features/bugs que estão presente nessa branc e assim feito merge para Main e também Dev.
+Para release, será escolhido um commit estável na branch DEV e será feito o merge para main.
 
 Mais info no:
 https://www.alura.com.br/artigos/git-flow-o-que-e-como-quando-utilizar?srsltid=AfmBOopstJCwgYAND855bTLVjTVd3yjaH041YOyjroKgL8kMGGM7xBRb
 
-#### Commit
+#### Commit e Tags
 
-Adotar alguma convenção de commit (ex.: feat: ..., fix: ..., docs: ...) e versionar com tags (v1.0.0, v1.1.0, etc.) na medida que o projeto for evoluindo.
+Adotar alguma convenção de commit (ex.: feat: ..., fix: ..., docs: ...) e versionar com tags (v1.0, v1.1, etc.) na medida que o projeto for evoluindo.\
 
 ### Procedimento de build e CI/CD
 
 #### Build
 A metodolia de build utilizada foi o programa make. Basta estar com o terminal na pasta raiz do projeto e executar o seguintes
 comandos:
-
 
 ```make``` para buildar a aplicação\
 ```make run``` para executar a aplicação\
@@ -82,26 +80,12 @@ O projeto foi definido que tenha a seguinte árvore:
 
 #### Politica de testes
 Cada Desenvolvedor fica responsável por testar o seu desenvolvimento de aplicação e se necessário, criar um test unitário  da nova aplicação dentro do
-./test/check_cart e toda o pullRequest deve ser verificado e testado por um outro desenvolvedor.
+./test/check_cart e toda o pullRequest deve ser verificado e testado por um outro desenvolvedor. Além disso, o próŕio GitAction também executará o teste a cada PR e Push na branch DEV e na branch MAIN.
 
 ### Forma de versionamento adotada
 Depois de determinado conjuntos de novas features e bugs, é estabilizado um commit na branch DEV e feito um merge para a main,
 gerando então uma TAG daquele commit, posteriormente é gerado um realise no GitHub, citando as alterações e adições, e também
 disponibilizando os executáveis, além do link da imagem do dockerFile. 
-
-### Sujestões Professor
-
-Link Projeto SCM: \
-https://gist.github.com/leopoldomt/4d1bdb8e489b47a897b8bf6d0346c31f 
-
-show cart\
-remover itens do carrinho\
-efetivar venda (Limpa o carrinho e mexe nas quantidades)\
-desistir da compra - libera o carrinho mas nao meche nas quantidades\
-fechamento do caixa - registrando as venda e listar as veendas do  dia \
-incrementar outras funcionalidades\
-gerar relatorio e arquivo txt de fechamento do caixa
-
 
 ### Lições Aprendidas
 
