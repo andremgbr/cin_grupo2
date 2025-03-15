@@ -10,6 +10,8 @@ int get_user_action(Product products[])
 
   scanf("%d", &input);
 
+  printf("\n======================================================\n");
+
   switch (input)
   {
   case 1:
@@ -33,11 +35,13 @@ int get_user_action(Product products[])
 
 void print_instructions()
 {
-  printf("\n1-Inserir item;\n");
-  printf("\n2-Mostrar Carrinho;\n");
-  printf("\n3-Limpar Carrinho;\n");
-  printf("\n4-Remover item do carrinho\n");
-  printf("\n5-Sair\n");
+  printf("\n======================================================\n");
+  printf("====================== MENU ==========================\n");
+  printf("1-Inserir item;\n");
+  printf("2-Mostrar Carrinho;\n");
+  printf("3-Limpar Carrinho;\n");
+  printf("4-Remover item do carrinho\n");
+  printf("5-Sair\n");
   printf("\nDigite a opção desejada:\n");
 }
 
@@ -126,8 +130,8 @@ void show_cart(Product products[])
 {
   int i = 0;
   float total = 0.0;
-
-  printf("\nCarrinho de Compras:\n");
+  printf("=============== CARRINHO DE COMPRAS ==================\n");
+  //printf("\nCarrinho de Compras:\n");
   printf("------------------------------------------------------\n");
   printf("%-5s \t%-20s \t%-10s \t%-10s\n", "Qtd", "Product", "Value (un.)", "Total");
 
@@ -197,6 +201,9 @@ int read_csv(Product products[],const char *file_path)
 
 void remove_item(Product products[]) {
   int local_itemID = -1;
+  
+  printf("\n======================================================\n");
+  printf("============ REMOVER ITENS DO CARRINHO ===============\n");
 
   printf("-----------------------------\n");
   printf("Lista de Produtos no Carrinho\n");
