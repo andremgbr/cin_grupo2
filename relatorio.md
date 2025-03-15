@@ -116,3 +116,14 @@ gerar relatorio e arquivo txt de fechamento do caixa
 #### Fábio Marques Henrique
 
 #### Terence Myren Kutzner
+Para mim foi o primeiro contato que tive com o Git/Github - tive um pouco de dificuldade para me familiarizar com os comandos e padrões para criar branch e commits. Com o passar do projeto, fui me familiarizando e cometendo menos erros ao fazer commits, reviews, criação de branch. 
+Uma outra dificuldade que senti no inicio foi fazer correções de nomes de branch por erros de digitação (acredito que pela pouca familiaridade com a ferramenta). No geral pode-se destacar algumas: 
+- A importância de seguir um padrão de nomenclatura para branches e commits, o que facilita a organização e entendimento do histórico do projeto. Nesse questito, como todos estavam aprendendo é possível ver claramente a diferença dos commits do inicio do projeto para o fim dele. 
+- Além disso, percebi o quanto os commits pequenos e frequentes ajudam na rastreabilidade das mudanças e tornam o processo de revisão mais facil.
+- Além disso, importante ter comunicação clara com o time, especialmente ao lidar com conflitos de merge. Nesse quesitos as reuniões realizadas com os integrantes ajudou bastante.
+
+
+
+
+
+
