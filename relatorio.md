@@ -13,15 +13,21 @@ O repositório será divido em 2 branches principais.
 - Dev: código em fase de desenvolvimento.
 
 Para alguma nova criação de funcionalidade deverá ser criada uma nova branch a partir do Dev com prefixo feature/ no nome, Ex: feature/funcionalidade, o que faŕa o merge para a branch Dev..\
-Para alguma correção de bug presente em produção, deve-se criar uma nova branch a partir do Main com prefixo hotfix/ no nome, Ex: hotfix/funcionalidade, o que deve ser feito merge na main e na dev posteriormente.\
+Para alguma correção de bug presente em produção, deve-se criar uma nova branch a partir do Main com prefixo hotfix/ ou fix/ no nome, Ex: hotfix/funcionalidade, o que deve ser feito merge na main e na dev posteriormente.\
 Para release, será escolhido um commit estável na branch DEV e será feito o merge para main.
-
-Mais info no:
-https://www.alura.com.br/artigos/git-flow-o-que-e-como-quando-utilizar?srsltid=AfmBOopstJCwgYAND855bTLVjTVd3yjaH041YOyjroKgL8kMGGM7xBRb
 
 #### Commit e Tags
 
-Adotar alguma convenção de commit (ex.: feat: ..., fix: ..., docs: ...) e versionar com tags (v1.0, v1.1, etc.) na medida que o projeto for evoluindo.\
+Para realização de commits foi utilizada a seguinte estrutura de prefixos para os cometários do commit:
+- Feat: indica uma featura adicionada;
+- Fix: indica a correção de um Bug;
+- Doc: Indica tudo que é ligado a documentação
+
+Vale destacar que devido a inexperiência de trabalho com projeto no github, houveram algumas vezes falhas a adesão desse padrão. Entretando, buscou-se ao máximo fazer com que essas normas fossem seguidas
+
+Para as Tags foi utilizado o seuinte padrão para identificar as releases:
+- Sempre que o programa adicionava alguma Feature nova utilizava se o padrão X.0 (Ex.: V1.0, 2.0)
+- Sempre que o programa corrigia algum bug utilizava se o padrão 1.X (Ex.: V1.1, V1.2)
 
 ### Procedimento de build e CI/CD
 
