@@ -22,6 +22,9 @@ int get_user_action(Product products[])
     clean_cart(products);
     break;
   case 4:
+    remove_item(products); // Não passa mais o tamanho
+    break;
+  case 5:
     return 1;
     break;
   }
@@ -30,10 +33,12 @@ int get_user_action(Product products[])
 
 void print_instructions()
 {
-  printf("\n1- Inserir item;\n");
+  printf("\n1-Inserir item;\n");
   printf("\n2-Mostrar Carrinho;\n");
   printf("\n3-Limpar Carrinho;\n");
-  printf("\n4-Sair;\n");
+  printf("\n4-Remover item do carrinho\n");
+  printf("\n5-Sair\n");
+  printf("\nDigite a opção desejada:\n");
 }
 
 void insert_item(Product products[])
@@ -188,4 +193,43 @@ int read_csv(Product products[],const char *file_path)
     clean_cart(products);
 
     return count; // Retorna número de produtos lidos
+}
+
+void remove_item(Product products[]) {
+  int local_itemID = -1;
+
+  printf("-----------------------------\n");
+  printf("Lista de Produtos no Carrinho\n");
+  printf("Cod - Nome\n");
+  for (int i = 0; products[i].qtd != -1; i++) {
+      if (products[i].qtd > 0) {
+          printf("%d - %s\n", i + 1, products[i].name);
+      }
+  }
+  printf("-----------------------------\n");
+
+  // Recebimento e validação do ID
+  int validID = 0;
+  while (validID == 0) {
+      printf("Digite o código do produto que deseja remover:\n");
+      scanf("%d", &local_itemID);
+      int i = 0;
+      while(products[i].qtd != -1) {
+        if(local_itemID == i+1) {
+          validID=1;
+          break;
+        }
+        i++;
+      }
+
+      if (validID == 0) {
+          printf("Código do produto inválido ou produto não está no carrinho.\n");
+      }
+  }
+
+  // Remover o produto do carrinho
+  if (validID == 1) {
+      products[local_itemID - 1].qtd = 0; // Zera a quantidade
+      printf("%s removido do carrinho.\n", products[local_itemID - 1].name);
+  }
 }
