@@ -1,6 +1,6 @@
 # Projeto Mercado
 
-Este projeto simula um sistema de carrinhos de compras simples de um mercado em linguagem C.
+Este projeto simula um sistema de compras de um mercado simples em linguagem C.
 
 ## Descrição
 
@@ -9,9 +9,30 @@ O programa permite que o usuário interaja com um carrinho de compras, realizand
 * Inserir itens no carrinho.
 * Visualizar o carrinho de compras.
 * Limpar o carrinho de compras.
-* Limpar um item do carrinho de compras.
 * Sair do programa.
 
+## Estrutura do Projeto
+
+```shell
+CIN_GRUPO2/
+  ├── bin/
+  ├── inc/
+  │   └── mercado.h
+  ├── obj/
+  ├── src/
+  │   ├── mercado.c
+  │   └── run.c
+  ├── Makefile
+  └── README.md
+```
+
+* `inc/mercado.h`: Contém a definição da estrutura `Product` e os protótipos das funções.
+* `src/mercado.c`: Implementa as funções de manipulação do carrinho de compras.
+* `src/run.c`: Contém a função `main` e a lógica principal do programa.
+* `bin/`: Diretório para os executáveis.
+* `obj/`: Diretório para os arquivos objeto.
+* `Makefile`: Arquivo para compilação do projeto.
+* `README.md`: Este arquivo com a descrição do projeto.
 
 ## Compilação e Execução
 
@@ -44,32 +65,32 @@ Para compilar e executar o programa, siga os passos abaixo:
     bin/mercado
     ```
 
+## Makefile
+
+O `Makefile` utiliza as seguintes variáveis:
+
+* `CC`: Compilador C (gcc).
+* `CFLAGS`: Flags de compilação (Wall, Wextra).
+* `TARGET`: Nome do executável (mercado).
+* `BINFOLDER`: Diretório para os executáveis (bin/).
+* `OBJFOLDER`: Diretório para os arquivos objeto (obj/).
+* `SRCFOLDER`: Diretório dos arquivos fonte (src/).
+* `INCLUD`: diretório dos arquivos de cabeçalho (inc/)
+* `SRCFILES`: Lista de arquivos fonte.
+
 ## Uso
 
 Ao executar o programa, você verá um menu com as seguintes opções:
 
-```1.  Inserir item no carrinho.```: Comando o qual listara os intens disponíveis para adicionar ao carrinho, o usuário deverá
-selecionar o intem desejado e depois a quantidade desejada.
-  
-```2.  Visualizar carrinho de compras.```: Comando o qual irá listar todos os intes que já estão no carrinho, o seu valor unitário
-e a quantidade total por item e a quantidade total no carrinho.
-
-```3.  Limpar carrinho de compras.```: Comando o qual irá retirar todos os intens do carrinho de compra, deixando o zerado.
-
-```4.  Remover item do carrinho.```: Comando o qual permite zerar apenas um item no carrinho de compra.
-
-```5.  Sair.```: Comando para sair da aplicação.
+1.  Inserir item no carrinho.
+2.  Visualizar carrinho de compras.
+3.  Limpar carrinho de compras.
+4.  Sair.
 
 Siga as instruções exibidas no console para interagir com o programa.
 
+## Atualizações
 
-## Docker
+Esse readme é apenas um esboço inicial para o projeto e será ajustado conforme o andamento do desenvollvimento da versão final do projeto.
 
-Aplicação disponível também no dockerhub fabiohennr/scm_cin_grupo2
-
-No terminal (tendo o docker já instalado) executar o seguinte comando: 
-```docker run -it --rm fabiohennr/scm_cin_grupo2```
-a partir disso fazer 
-```cd /cin_grupo2``` para entrar na pasta do projeto.\
-executar ```make``` para compilar e ```make run``` para executar o projeto.
-
+.
