@@ -56,6 +56,7 @@ START_TEST(teste_read_csv)
   fprintf(file, "banana,2,1.1\n");
   fprintf(file, "vassoura,3,1.0\n");
   fprintf(file, "sabao,3,1.0\n");
+  fprintf(file, "-1,-1,-1\n");
   fclose(file);
   
   int count = read_csv(products, file_path);
@@ -113,5 +114,5 @@ int main(void) {
   int number_failed2 = srunner_ntests_failed(sr2);
   srunner_free(sr2);
 
-  return (number_failed == 0) ? EXIT_SUCCESS : EXIT_FAILURE;
+   return (number_failed == 0 && number_failed2 == 0) ? EXIT_SUCCESS : EXIT_FAILURE;
 }
