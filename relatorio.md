@@ -106,12 +106,10 @@ gerar relatorio e arquivo txt de fechamento do caixa
 ### Lições Aprendidas
 
 #### André Roetger
-* Achei muito interessantes o gerenciamento de tarefas disponível no Projects do GitHub, além do que, no próprio gerenciamento de
-  "issues" do gitHub é possível fazer muitas atividades para o desenvolvimento do projeto.
-* Um desafio que foi encontrado no time, não teve uma pessoa ou um lider responsável por definir qual o escopo do projeto e de
-quem seria designado as tarefas.
-* Nós tivemos que fazer algumas reuniões "meeting" para definir algumas coisas, apesar que a issues é permitido comentários,
-sentimos falta de um ambiente de chat instântaneo.  
+* Achei muito interessante o gerenciamento de tarefas disponível no Projects do GitHub. Além disso, o próprio gerenciamento de issues oferece diversas funcionalidades úteis para o desenvolvimento do projeto.
+* Eu desconhecia a ferramenta Actions do GitHub e achei extremamente interessante aprender a utilizá-la. Fiquei impressionado com o quão poderosa ela é, especialmente para o controle de testes, automação de processos e envio de notificações por e-mail para os responsáveis.
+* Um dos desafios enfrentados pelo time foi a falta de um líder responsável por definir o escopo do projeto e designar as tarefas entre os membros.
+* Tivemos que realizar algumas reuniões para alinhar decisões importantes. Apesar de a seção de issues permitir comentários, sentimos falta de um ambiente de chat instantâneo para facilitar a comunicação em tempo real.
 
 #### Dennis Paulino Irineu
 
