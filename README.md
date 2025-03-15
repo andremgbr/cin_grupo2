@@ -74,6 +74,6 @@ Siga as instruções exibidas no console para interagir com o programa.
 Aplicação disponível também no dockerhub fabiohennr/scm_cin_grupo2
 
 No terminal (tendo o docker já instalado) executar o seguinte comando: 
-```docker run -it --rm fabiohennr/scm_cin_grupo2:v2.0```
+```docker run -it --rm fabiohennr/scm_cin_grupo2:v2.1```
 a partir disso, o programa já esta configurado e pronto para execução
 
