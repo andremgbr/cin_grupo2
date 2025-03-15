@@ -12,6 +12,12 @@ O programa permite que o usuário interaja com um carrinho de compras, realizand
 * Limpar um item do carrinho de compras.
 * Sair do programa.
 
+### Depedencias
+
+FrameWork de test em C
+```Bash
+$ sudo apt-get install check
+```
 
 ## Compilação e Execução
 
