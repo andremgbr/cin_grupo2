@@ -1,10 +1,11 @@
 ### Depedencias
-
+```Bash
 $ sudo apt-get install check
+```
 
-make -> para buildar a aplicação
-make run -> para executar a aplicação
-make test -> para executar os teste unitários
+```make```: para buildar a aplicação
+```make run```: para executar a aplicação
+```make test```: para executar os teste unitários
 
 ### GitFlow 
 
