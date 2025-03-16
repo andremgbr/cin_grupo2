@@ -94,13 +94,20 @@ Para o programa foram cirados os testes unitários.Cada Desenvolvedor fica respo
 
 O gerenciamento de atividades foi feita pelo próprio GitHub project.
 
-Nele as atividades se davam a partir da criação de issues. Nessas issues eram apresnetados:
+Nele as atividades se davam a partir da criação de issues. Nessas issues eram apresentados:
 
 - Sugestões de Melhorias
 - Correções de Bugs
 
- Essas issues recebiam labels (enhancement, bug, documentation), eram associadas a um projetos e designado a um responsável. Geralmente, o próprrio criador da issue atribuia esses elementos. Aqui vale destacar que devido no início do projeto o time não possio tanta familiaridade com esses elementos, entretanto isso foi aperfeiçoado ao decorrer do projeto. Dessa forma nas issues finais o time ja estava entendendo como atribuir essas issues e identificá-las.
+ Essas issues recebiam labels (enhancement, bug, documentation), eram associadas a um projetos e designado a um responsável. Geralmente, o próprio criador da issue atribuia esses elementos. Aqui vale destacar que devido no início do projeto o time não possio tanta familiaridade com esses elementos, entretanto isso foi aperfeiçoado ao decorrer do projeto. Dessa forma nas issues finais o time ja estava entendendo como atribuir essas issues e identificá-las. No contexto do nosso projeto, seguimos um fluxo típico para o tratamento de bugs, que pode ser descrito da seguinte forma:
 
+- Identificação e Relato: Quando um bug é encontrado, ele é documentado como uma issue, detalhando o problema identificado.
+- Atribuição da Correção: Após a criação da issue atribuia-se a issue a algum integrante. No nosso caso, quem abrisse a issue ja atribuia a um responsável.
+- Correção: A pessoa designada trabalha na correção, aplicando um fix no código.
+- Testes: Após a correção, são feitos testes para garantir que a solução funciona corretamente e não gera novos problemas.
+- Lançamento: A correção fix é incluída na seguinte release do projeto.
+
+No caso específico do nosso projeto foram deixados alguns bugs intencionais para exercitar essa questão.
  
 ### Reflexões e Lições Aprendidas
 
