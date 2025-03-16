@@ -111,6 +111,10 @@ Nele as atividades se davam a partir da criação de issues. Nessas issues eram 
 * Tivemos que realizar algumas reuniões para alinhar decisões importantes. Apesar de a seção de issues permitir comentários, sentimos falta de um ambiente de chat instantâneo para facilitar a comunicação em tempo real.
 
 #### Dennis Paulino Irineu
+* De fato o Github mostou-se ser indispensável para a realização de projetos (sejam eles grandes ou pequenos), já que ele dispões de tantas funcionalidades auxiliadoras. A possibilidade de exergar o história de commits e até a possibilidade de fazer um rollback são apenas alguns dessa facilidade que o git trás ao desenvolvedor. 
+* A questão de pedir uma review de outro programador é muito benéfico, já que é um olhar de fora olhando seu código, além de diminuir a possibilidade de você acabar fazendo um merge numa branch errada, erro esse que pode ser um impesílio.
+* A criação de branchs para cada tipo de tasks ajuda muito e permite com que mais pessoas possam contribuir com o programa.
+* Um grande desafio foi enfrentar erros de merge, parte essa onde eu carecia de conhecimento.
 
 #### Fábio Marques Henrique
 * A realização de um projeto na prática é uma excelente forma de fixar a teoria aprendida em aula. A questão fundamental do versionamento se tornou, na minha cabeça, essencial para uma boa identificação dos itens de configuração, seu controle, permitindo auditoria e geração de relatórios. Mesmo para pequenos projetos (os quais eu desenvolvia sozinho) não me vejo trabalhando sem o auxilio de  uma ferramenta de controle de versão, como fazia antes e se mostra quase que obrigatório em um contexto de trabalho em equipe.
