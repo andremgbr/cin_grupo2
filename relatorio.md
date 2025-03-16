@@ -113,6 +113,10 @@ Nele as atividades se davam a partir da criação de issues. Nessas issues eram 
 #### Dennis Paulino Irineu
 
 #### Fábio Marques Henrique
+* A realização de um projeto na prática é uma excelente forma de fixar a teoria aprendida em aula. A questão fundamental do versionamento se tornou, na minha cabeça, essencial para uma boa identificação dos itens de configuração, seu controle, permitindo auditoria e geração de relatórios. Mesmo para pequenos projetos (os quais eu desenvolvia sozinho) não me vejo trabalhando sem o auxilio de  uma ferramenta de controle de versão, como fazia antes e se mostra quase que obrigatório em um contexto de trabalho em equipe.
+* Com as noções de build engeneering + environment configuration podemos verificar como se torna muito mais simples atualizações e testes usando ferramentas como o Make e Docker que em conjunto com as "actions" do GitHub que facilitam muito automação de rotinas desses testes.
+* Outro ponto de extrema importância foi a realização de release management para rastreamento de versões e possibilidade de rollback caso haja necessidade.
+Como todo projeto pode ser melhorado entramos no ciclo de melhoria continua e percebemos a importância de sempre manter um padrão no desenvolvimento do projeto, mantendo reuniões periódicas e decidindo próximos passos deixando sempre versões que podem ser facilmente apuradas e coletas para adaptações e/ou melhorias.
 
 #### Terence Myren Kutzner
 Para mim foi o primeiro contato que tive com o Git/Github - tive um pouco de dificuldade para me familiarizar com os comandos e padrões para criar branch e commits. Com o passar do projeto, fui me familiarizando e cometendo menos erros ao fazer commits, reviews, criação de branch.  Uma outra dificuldade que senti no inicio foi fazer correções de nomes de branch por erros de digitação (acredito que pela pouca familiaridade com a ferramenta). No geral pode-se destacar algumas lições aprendidas: 
