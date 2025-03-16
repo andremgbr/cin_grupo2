@@ -25,9 +25,11 @@ Para realização de commits foi utilizada a seguinte estrutura de prefixos para
 
 Vale destacar que devido a inexperiência de trabalho com projeto no github, houveram algumas vezes falhas a adesão desse padrão. Entretando, buscou-se ao máximo fazer com que essas normas fossem seguidas
 
-Para as Tags foi utilizado o seuinte padrão para identificar as releases:
+
+Depois de determinado conjuntos de novas features e bugs, é estabilizado um commit na branch DEV e feito um merge para a main, gerando então uma TAG daquele commit, posteriormente é gerado um realise no GitHub, citando as alterações e adições, e também disponibilizando os executáveis, além do link da imagem do dockerFile. Para as Tags foi utilizado o seuinte padrão para identificar posteriormente as releases:
+
 - Sempre que o programa adicionava alguma Feature nova utilizava se o padrão X.0 (Ex.: V1.0, 2.0)
-- Sempre que o programa corrigia algum bug utilizava se o padrão 1.X (Ex.: V1.1, V1.2)
+- Sempre que o programa corrigia algum bug em uma release ja existente utilizava se o padrão 1.X (Ex.: V1.1, V1.2)
 
 ### Procedimento de build e CI/CD
 
@@ -41,11 +43,11 @@ comandos:
 
 #### GitActions
 
-Foi criada uma GitActions para CI/CD, nele está configurada uma ação que, a cada merge para a branch DEV e para a branch MAIN, é
-realizada o ```make``` para verificar se o códigos é compilado corretamente e também realiza o ```make test``` verificando se todos os testes
-unitários.
+Foi criada uma GitActions para CI/CD, nele está configurada uma ação que, a cada merge para a branch DEV e para a branch MAIN, é realizada o ```make``` para verificar se o códigos é compilado corretamente e também realiza o ```make test``` verificando se todos os testes unitários.
 
 ### Estrutura e política de testes
+
+Forma implementados testes unitários para o programa. Cada desenvolvedor ficou responsável por testar sua própria implementação e, se necessário, criar testes adicionais dentro do diretório ./test/check_cart. Além disso, todo pull request passa por uma revisão e testes realizados por outro desenvolvedor. O GitHub Actions, como menccionado anteriomente, também executa automaticamente os testes a cada Pull Request e push nas branches DEV e MAIN.
 
 #### Estrutura
 O projeto foi definido que tenha a seguinte árvore:
@@ -85,15 +87,22 @@ O projeto foi definido que tenha a seguinte árvore:
 
 
 #### Politica de testes
-Cada Desenvolvedor fica responsável por testar o seu desenvolvimento de aplicação e se necessário, criar um test unitário  da nova aplicação dentro do
+Para o programa foram cirados os testes unitários.Cada Desenvolvedor fica responsável por testar o seu desenvolvimento de aplicação e se necessário, criar um test unitário  da nova aplicação dentro do
 ./test/check_cart e toda o pullRequest deve ser verificado e testado por um outro desenvolvedor. Além disso, o próŕio GitAction também executará o teste a cada PR e Push na branch DEV e na branch MAIN.
 
-### Forma de versionamento adotada
-Depois de determinado conjuntos de novas features e bugs, é estabilizado um commit na branch DEV e feito um merge para a main,
-gerando então uma TAG daquele commit, posteriormente é gerado um realise no GitHub, citando as alterações e adições, e também
-disponibilizando os executáveis, além do link da imagem do dockerFile. 
+#### Gerenciamento de Projeto
 
-### Lições Aprendidas
+O gerenciamento de atividades foi feita pelo próprio GitHub project.
+
+Nele as atividades se davam a partir da criação de issues. Nessas issues eram apresnetados:
+
+- Sugestões de Melhorias
+- Correções de Bugs
+
+ Essas issues recebiam labels (enhancement, bug, documentation), eram associadas a um projetos e designado a um responsável. Geralmente, o próprrio criador da issue atribuia esses elementos. Aqui vale destacar que devido no início do projeto o time não possio tanta familiaridade com esses elementos, entretanto isso foi aperfeiçoado ao decorrer do projeto. Dessa forma nas issues finais o time ja estava entendendo como atribuir essas issues e identificá-las.
+
+ 
+### Reflexões e Lições Aprendidas
 
 #### André Roetger
 * Achei muito interessante o gerenciamento de tarefas disponível no Projects do GitHub. Além disso, o próprio gerenciamento de issues oferece diversas funcionalidades úteis para o desenvolvimento do projeto.
@@ -106,8 +115,9 @@ disponibilizando os executáveis, além do link da imagem do dockerFile.
 #### Fábio Marques Henrique
 
 #### Terence Myren Kutzner
-Para mim foi o primeiro contato que tive com o Git/Github - tive um pouco de dificuldade para me familiarizar com os comandos e padrões para criar branch e commits. Com o passar do projeto, fui me familiarizando e cometendo menos erros ao fazer commits, reviews, criação de branch. 
-Uma outra dificuldade que senti no inicio foi fazer correções de nomes de branch por erros de digitação (acredito que pela pouca familiaridade com a ferramenta). No geral pode-se destacar algumas: 
+Para mim foi o primeiro contato que tive com o Git/Github - tive um pouco de dificuldade para me familiarizar com os comandos e padrões para criar branch e commits. Com o passar do projeto, fui me familiarizando e cometendo menos erros ao fazer commits, reviews, criação de branch.  Uma outra dificuldade que senti no inicio foi fazer correções de nomes de branch por erros de digitação (acredito que pela pouca familiaridade com a ferramenta). No geral pode-se destacar algumas lições aprendidas: 
 - A importância de seguir um padrão de nomenclatura para branches e commits, o que facilita a organização e entendimento do histórico do projeto. Nesse questito, como todos estavam aprendendo é possível ver claramente a diferença dos commits do inicio do projeto para o fim dele. 
 - Além disso, percebi o quanto os commits pequenos e frequentes ajudam na rastreabilidade das mudanças e tornam o processo de revisão mais facil.
 - Além disso, importante ter comunicação clara com o time, especialmente ao lidar com conflitos de merge. Nesse quesitos as reuniões realizadas com os integrantes ajudou bastante.
+
+
